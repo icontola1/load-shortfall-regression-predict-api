@@ -30,7 +30,7 @@ app = Flask(__name__)
 # Load our model into memory.
 # Please update this path to reflect your own trained model.
 static_model = load_model(
-    path_to_model='assets/trained-models/load_shortfall_simple_lm_regression.pkl')
+    path_to_model='assets/trained-models/randforest.pkl')
 
 print ('-'*40)
 print ('Model successfully loaded')
@@ -56,10 +56,15 @@ def model_prediction():
     # response with our API.
     return jsonify(output)
 
+
 # Configure Server Startup properties.
+#    app.run(host='192.168.0.153', port=5000, debug=True)
 # Note:
 # When developing your API, set `debug=True`
 # This will allow Flask to automatically restart itself everytime you
 # update your API code.
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    app.run(host='0.0.0.0', port=5000, debug=True)
+
+    
+    
