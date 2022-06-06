@@ -58,7 +58,7 @@ def model_prediction():
 
 
 # Configure Server Startup properties.
-#    app.run(host='192.168.0.153', port=5000, debug=True)
+#    app.run(host='0.0.0.0', port=5000, debug=True)
 # Note:
 # When developing your API, set `debug=True`
 # This will allow Flask to automatically restart itself everytime you
